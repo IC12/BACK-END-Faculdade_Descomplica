@@ -1,3 +1,4 @@
+//teste
 import { express } from "express";
 import { pkg } from "body-parser";
 import { router } from "./routes/router.js";

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="py-3 text-center">
+    <h3>Cadastro de Usuários</h3>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex align-content-end justify-content-end pb-5">
+      <a class="btn btn-primary" [href]="'/users'">VOLTAR</a>
+    </div>
+  </div>
+  <div class="row d-flex align-content-center justify-content-center">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(fileInput.files)">
+
+      <form [formGroup]="form">
+        <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+        <!-- adicionar o options no HTML  [options]="options" -->
+        <img [src]="url" alt="Image Preview" width="200px" height="200px"
+          class="row d-flex align-content-center justify-content-center">
+        <input type="file" style="display: none;" name="file" accept="image/*" [multiple]="false"
+          (change)="onSelectNewFile($event)" #fileInput>
+        <input type="button" class="btn btn-primary" value="Choose file" (click)="fileInput.click()" />
+      </form>
+
+      <div class="col-12 d-flex align-content-center justify-content-center pt-5">
+        <button class="btn btn-primary" type="submit">
+          Salvar
+        </button>
+
+        <button class="btn btn-danger" type="reset">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

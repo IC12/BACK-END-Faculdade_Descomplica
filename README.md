@@ -6,6 +6,6 @@ Exercícios usando Modelo MVC, API RESTful, Spring Boot, Spring Data JPA, Spring
 - Postman para plataforma de APIS <https://www.postman.com/downloads/>
 
 # Intermediary Back-End
-Exercícios usando NodeJS
+Exercícios usando Angular, NodeJS e JavaScript
 
 # Advanced Back-End

@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     UserFormComponent,
     UserListComponent,
-    //Modulo 7- Adicionar as 2 declarações abaixo
   ],
   imports: [
     CommonModule,

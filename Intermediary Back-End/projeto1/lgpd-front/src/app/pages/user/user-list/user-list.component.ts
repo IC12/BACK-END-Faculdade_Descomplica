@@ -1,12 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
-import {UserService} from "../user.service";
-import {GENDERS} from "../user-form/user-form.component";
+import { Component, OnInit } from "@angular/core";
+import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { UserService } from "../user.service";
+import { GENDERS } from "../user-form/user-form.component";
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  selector: "app-user-list",
+  templateUrl: "./user-list.component.html",
+  styleUrls: ["./user-list.component.scss"],
 })
 export class UserListComponent implements OnInit {
   faPencil = faPencil;
@@ -14,26 +14,21 @@ export class UserListComponent implements OnInit {
 
   users: any[] = [];
 
-  constructor(
-    private userService: UserService
-  ) {
-
-  }
+  constructor(private userService: UserService) {}
 
   async ngOnInit(): Promise<void> {
     await this.listUsers();
   }
 
-  async listUsers(): Promise<void>{
+  async listUsers(): Promise<void> {
     this.users = await this.userService.get<any[]>({
       url: "http://localhost:3000/getAllUsers",
-      params: {
-      }
+      params: {},
     });
   }
 
   getLabelGender(value: string): string | undefined {
-    let gender = GENDERS.find((gender) => gender.value === value)
+    let gender = GENDERS.find((gender) => gender.value === value);
     return gender?.label;
   }
 
@@ -41,7 +36,7 @@ export class UserListComponent implements OnInit {
     if (confirm("Deseja deletar este usuário?")) {
       await this.userService.delete<any>({
         url: `http://localhost:3000/deleteUser/${id}`,
-        params: {}
+        params: {},
       });
       await this.listUsers();
     }

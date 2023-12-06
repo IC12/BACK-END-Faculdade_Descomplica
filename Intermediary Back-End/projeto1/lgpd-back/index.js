@@ -7,10 +7,10 @@ import association from "./models/Associations.js";
 import cors from "cors";
 
 const app = express();
-const { json, urlendcoded } = pkg;
+const { json, urlencoded } = pkg;
 
 app.use(json());
-app.use(urlendcoded({ extended: true }));
+app.use(urlencoded({ extended: true }));
 app.use(cors());
 
 (async () => {

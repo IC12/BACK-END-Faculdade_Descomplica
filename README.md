@@ -9,3 +9,6 @@ Exercícios usando Modelo MVC, API RESTful, Spring Boot, Spring Data JPA, Spring
 Exercícios usando Angular, NodeJS e API Restful
 
 # Advanced Back-End
+Conceitos de Docker, Kubernetes, Rancher, CI/CD e DevOps
+
+- Repositório dos projetos do professor <https://github.com/FaculdadeDescomplica/Advanced-BackEnd>

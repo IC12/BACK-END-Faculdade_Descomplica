@@ -1,6 +1,6 @@
-import { express } from "express";
-import { pkg } from "body-parser";
-import { router } from "./routes/router.js";
+import express from "express";
+import pkg from "body-parser";
+import router from "./routes/router.js";
 import sequelize from "./utils/database.js";
 import association from "./models/Associations.js";
 

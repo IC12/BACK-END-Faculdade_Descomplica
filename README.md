@@ -3,12 +3,12 @@ Exercícios usando **Modelo MVC**, **API RESTful**, **Spring Boot**, **Spring Da
 
 ---
 
-# ⚙️ Intermediary Back-End
+# ⚙️ Intermediary Full-Stack
 Exercícios usando **Angular**, **NodeJS** e **API Restful**.
 
 ---
 
-# 🚀 Advanced Back-End
+# 🚀 Advanced DevOps
 Conceitos de **Docker**, **Kubernetes**, **Rancher**, **CI/CD** e **DevOps**.
 
 📂 Repositório dos projetos do professor: <https://github.com/FaculdadeDescomplica/Advanced-BackEnd>

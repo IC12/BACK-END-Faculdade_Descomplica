@@ -1,31 +1,31 @@
 import courseRepository from "../repositories/CourseRepository.js";
 
 const saveCourse = (courseModel) => {
-    return CourseRepository.saveCourse(courseModel);
-}
+  return courseRepository.saveCourse(courseModel);
+};
 
 const getCourseById = (id) => {
-    return CourseRepository.getCourseById(id);
-}
+  return courseRepository.getCourseById(id);
+};
 
 const getAllCourses = () => {
-    return CourseRepository.getAllCourses();
-}
+  return courseRepository.getAllCourses();
+};
 
 const deleteCourseById = (id) => {
-    return CourseRepository.deleteCourseById(id);
-}
+  return courseRepository.deleteCourseById(id);
+};
 
 const updateCourseById = (id, courseModel) => {
-    return CourseRepository.updateCourseById(id, courseModel);
-}
+  return courseRepository.updateCourseById(id, courseModel);
+};
 
 const service = {
-    saveCourse,
-    getCourseById,
-    getAllCourses,
-    deleteCourseById,
-    updateCourseById
-}
+  saveCourse,
+  getCourseById,
+  getAllCourses,
+  deleteCourseById,
+  updateCourseById,
+};
 
 export default service;

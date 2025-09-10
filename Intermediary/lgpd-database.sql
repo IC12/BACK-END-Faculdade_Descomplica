@@ -1,10 +1,10 @@
-DROP TABLE public."Courses" CASCADE;
+DROP TABLE public."courses" CASCADE;
 
-DROP TABLE public."Evaluations" CASCADE;
+DROP TABLE public."evaluations" CASCADE;
 
-DROP TABLE public."Teachers" CASCADE;
+DROP TABLE public."teachers" CASCADE;
 
-DROP TABLE public."Users" CASCADE;
+DROP TABLE public."users" CASCADE;
 
 
 CREATE TABLE "users" (
@@ -15,12 +15,12 @@ CREATE TABLE "users" (
 	gender VARCHAR(55) NOT NULL
 );
 
-create table "Courses" (
+create table "courses" (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(50) NOT NULL
 );
 
-create table "Teachers" (
+create table "teachers" (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR ( 50 ) NOT NULL,
 	course_id INTEGER NOT null,
@@ -30,7 +30,7 @@ create table "Teachers" (
 );
 
 
-create table "Evaluations" (
+create table "evaluations" (
 	id SERIAL PRIMARY KEY,
 	user_id INTEGER NOT NULL,
 	concept VARCHAR (50) NOT null,
@@ -43,7 +43,7 @@ create table "Evaluations" (
 	  REFERENCES "Users"(id)
 );
 
-select * from "Users";
-select * from "Teachers";
-select * from "Evaluations";
-select * from "Courses";
+select * from users;
+select * from teachers;
+select * from evaluations;
+select * from courses;

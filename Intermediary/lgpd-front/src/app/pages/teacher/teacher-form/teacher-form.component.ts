@@ -8,7 +8,6 @@ import { TeacherService } from "../teacher.service";
 @Component({
   selector: "app-teacher-form",
   templateUrl: "./teacher-form.component.html",
-  styleUrls: ["./teacher-form.component.scss"],
 })
 export class TeacherFormComponent {
   teacher: any = {};

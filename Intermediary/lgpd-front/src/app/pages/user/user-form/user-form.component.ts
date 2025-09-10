@@ -15,7 +15,6 @@ export const GENDERS = [
 @Component({
   selector: "app-user-form",
   templateUrl: "./user-form.component.html",
-  styleUrls: ["./user-form.component.scss"],
 })
 export class UserFormComponent {
   fileInput: File | null = null;
@@ -82,28 +81,17 @@ export class UserFormComponent {
     private domSanitizer: DomSanitizer
   ) {
     this.route.queryParams.subscribe(async (params: any) => {
-      if (params.id !== undefined && params.id !== null) {
+      if (params.id) {
         this.user = await this.userService.get<any>({
           url: `http://localhost:3000/user/${params.id}`,
           params: {},
         });
         this.model = this.user;
-        this.getImage(
-          "http://localhost:3000/userImage/" + this.model.id
-        ).subscribe((x) => (this.url = x));
+        this.url = this.user.profile_picture;
       } else {
         this.model = {};
       }
     });
-  }
-
-  public getImage(url: string): Observable<SafeResourceUrl> {
-    return this.http.get(url, { responseType: "blob" }).pipe(
-      map((x) => {
-        const urlToBlob = window.URL.createObjectURL(x);
-        return this.domSanitizer.bypassSecurityTrustResourceUrl(urlToBlob);
-      })
-    );
   }
 
   onSelectNewFile(event: any): void {
@@ -117,7 +105,7 @@ export class UserFormComponent {
   async onSubmit(fileinput: FileList | null): Promise<void> {
     // atenção o parâmetro precisa ter o null por conta do HTML
 
-    let fileInput = fileinput![0]; // o fileinput é parâmetro do onSubmit e o fileInput é atributo do componente
+    let fileInput = fileinput![0];
     let formData = new FormData();
     formData.append("first_name", this.model.first_name);
     formData.append("last_name", this.model.last_name);

@@ -6,7 +6,6 @@ import { EvaluationService } from "../evaluation.service";
 @Component({
   selector: "app-evaluation-list",
   templateUrl: "./evaluation-list.component.html",
-  styleUrls: ["./evaluation-list.component.scss"],
 })
 export class EvaluationListComponent implements OnInit {
   faPencil = faPencil;

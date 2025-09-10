@@ -1,14 +1,14 @@
 import express from "express";
+import Messages from "../utils/messages.js";
+import courseController from "./CourseController.js";
+import evaluationController from "./EvaluationController.js";
+import teacherController from "./TeacherController.js";
+import userController from "./UserController.js";
+
 let router = express.Router();
 
-import userController from "./UserController.js";
-import courseController from "./CourseController.js";
-import teacherController from "./TeacherController.js";
-import evaluationController from "./EvaluationController.js";
-
 router.get("/", function(req, res){
-    console.log("Olá!");
-    res.status(200).json({ message: "Sucesso!" });
+    res.status(200).json({ message: Messages.Alerts.GENERIC_SUCCESS });
 });
 
 router.use("/", userController);

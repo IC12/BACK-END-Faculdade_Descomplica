@@ -29,11 +29,11 @@ Conceitos de **Docker**, **Kubernetes**, **Rancher**, **CI/CD** e **DevOps**.
    Depois, tente novamente `npm install`.
 
 5. Configure o banco de dados **PostgreSQL**:  
-   - Verifique o arquivo `utils/database.js` para as configurações.  
-   - Instale o **PostgreSQL** no Windows.  
+   - Verifique o arquivo `utils/database.js` para as configurações;  
+   - Instale o **PostgreSQL** no Windows;
    - Crie um banco com o mesmo nome do Sequelize:  
      CREATE DATABASE "lgpd-database";  
-   - Crie as tabelas do projeto usando os scripts do arquivo `lgpd-database.sql`.
+   - Crie as tabelas do projeto usando os scripts do arquivo `lgpd-database.sql` encontrado na pasta database.
 
 6. Para rodar o back-end:  
    `node index.js`
@@ -52,3 +52,20 @@ Conceitos de **Docker**, **Kubernetes**, **Rancher**, **CI/CD** e **DevOps**.
 
 4. Após iniciar, o projeto ficará disponível em:  
    http://localhost:4202
+
+---
+
+# 🔎 Testes de APIs (Postman)
+Recomendo usar o **Postman** para testar as APIs existentes nesse projeto.
+Deixei o arquivo da collection `Project_LGPD_Pós.postman_collection.json` dentro da pasta postman para que possa exportar dentro do Postman.
+
+## 📥 Como importar a Collection no Postman ##
+
+```postman
+- Abra o Postman;
+
+- Clique em Import (opção 3 traços canto superior esquerdo);
+
+- Selecione a opção File/Import... e carregue o arquivo Project_LGPD_Pós.postman_collection.json disponível no repositório;
+
+- A collection aparecerá na aba lateral do Postman, pronta para ser usada.

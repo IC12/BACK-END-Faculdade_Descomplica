@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "6a128960-0219-4c89-b1ac-5f74133c61a3",
+		"name": "Project_LGPD_Pós",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30031996"
+	},
+	"item": [
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "addCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Curso teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/addCourse",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"addCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/getAllCourses",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"getAllCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "courseId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/course/2",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"course",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCourseId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Curso teste2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/updateCourse/2",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"updateCourse",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCourseId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/deleteCourse/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"deleteCourse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evaluation",
+			"item": [
+				{
+					"name": "addEvaluation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"concept\": \"Teste avaliação\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/addEvaluation",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"addEvaluation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllEvaluations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/getAllEvaluations",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"getAllEvaluations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "evaluationId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/evaluation/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"evaluation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEvaluationId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"concept\": \"Teste avaliação 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/updateEvaluation/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"updateEvaluation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEvaluationId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/deleteEvaluation/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"deleteEvaluation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "addTeacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Second Teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/addTeacher",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"addTeacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTeachers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/getAllTeachers",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"getAllTeachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "teacherId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/teacher/2",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"teacher",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTeacherId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teacher 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/updateTeacher/2",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"updateTeacher",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTeacherId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teacher 2\"\r\n}"
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/deleteTeacher/2",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"deleteTeacher",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Deloren",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "johnDeloren@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/addUser",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/getAllUsers",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/user/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userImageId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/userImage/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"userImage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Deloren",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "johnDeloren@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/updateUser/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"updateUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localURLProjectLGPDPos}}/deleteUser/1",
+							"host": [
+								"{{localURLProjectLGPDPos}}"
+							],
+							"path": [
+								"deleteUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "localURLProjectLGPDPos",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

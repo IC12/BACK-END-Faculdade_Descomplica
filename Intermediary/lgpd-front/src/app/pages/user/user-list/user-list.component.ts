@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { UserService } from "../user.service";
 import { GENDERS } from "../user-form/user-form.component";
+import { User } from "../user.interface";
+import { UserService } from "../user.service";
 
 @Component({
   selector: "app-user-list",
@@ -11,7 +12,7 @@ export class UserListComponent implements OnInit {
   faPencil = faPencil;
   faTrash = faTrash;
 
-  users: any[] = [];
+  users: User[] = [];
 
   constructor(private userService: UserService) {}
 
@@ -20,14 +21,14 @@ export class UserListComponent implements OnInit {
   }
 
   async listUsers(): Promise<void> {
-    this.users = await this.userService.get<any[]>({
+    this.users = await this.userService.get<User[]>({
       url: "http://localhost:3000/getAllUsers",
       params: {},
     });
   }
 
   getLabelGender(value: string): string | undefined {
-    let gender = GENDERS.find((gender) => gender.value === value);
+    const gender = GENDERS.find((g) => g.value === value);
     return gender?.label;
   }
 
@@ -39,6 +40,11 @@ export class UserListComponent implements OnInit {
       });
       await this.listUsers();
     }
+  }
+
+  /** trackBy para otimização do ngFor */
+  trackById(index: number, user: User): number {
+    return user.id;
   }
 
   onConfirm(value: any) {
